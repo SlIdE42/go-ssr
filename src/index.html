@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="Server-Side Rendering">
+    <title>Server-Side Rendering</title>
+    <script id="init" type="application/json">{{ index . "json" }}</script>
+    <script src="/js/{{ index . "bundle" }}.js" async></script>
+  </head>
+  <body>
+    <h1>Server-Side Rendering</h1>
+    {{ index . "html" }}
+  </body>
+</html>

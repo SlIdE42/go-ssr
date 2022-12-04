@@ -1,0 +1,52 @@
+{
+  "name": "go-ssr",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run build:hyperapp && npm run build:inferno && npm run build:mithril && npm run build:preact && npm run build:react && npm run build:solid && npm run build:vue",
+    "build:hyperapp": "esbuild --target=es6 --bundle --minify hyperapp/client.js --outfile=dist/js/hyperapp.js",
+    "build:hyperscript": "esbuild --target=es6 --bundle --minify hyperscript/client.js --outfile=dist/js/hyperscript.js",
+    "build:inferno": "esbuild --target=es6 --bundle --minify inferno/client.js --outfile=dist/js/inferno.js",
+    "build:mithril": "esbuild --target=es6 --bundle --minify mithril/client.js --outfile=dist/js/mithril.js",
+    "build:preact": "esbuild --target=es6 --bundle --minify preact/client.js --outfile=dist/js/preact.js",
+    "build:react": "esbuild --target=es6 --bundle --minify react/client.js --outfile=dist/js/react.js",
+    "build:solid": "esbuild --target=es6 --bundle --minify solid/client.js --outfile=dist/js/solid.js",
+    "build:vue": "esbuild --target=es6 --bundle --minify vue/client.js --outfile=dist/js/vue.js --define:__VUE_OPTIONS_API__=false --define:__VUE_PROD_DEVTOOLS__=false",
+    "watch:hyperapp": "esbuild --target=es6 --bundle --watch hyperapp/client.js --outfile=dist/js/hyperapp.js",
+    "watch:hyperscript": "esbuild --target=es6 --bundle --watch hyperscript/client.js --outfile=dist/js/hyperscript.js",
+    "watch:inferno": "esbuild --target=es6 --bundle --watch inferno/client.js --outfile=dist/js/inferno.js",
+    "watch:mithril": "esbuild --target=es6 --bundle --watch mithril/client.js --outfile=dist/js/mithril.js",
+    "watch:preact": "esbuild --target=es6 --bundle --watch preact/client.js --outfile=dist/js/preact.js",
+    "watch:react": "esbuild --target=es6 --bundle --watch react/client.js --outfile=dist/js/react.js",
+    "watch:solid": "esbuild --target=es6 --bundle --watch solid/client.js --outfile=dist/js/solid.js",
+    "watch:vue": "esbuild --target=es6 --bundle --watch vue/client.js --outfile=dist/js/vue.js",
+    "lighthouse": "npx run lighthouse",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "fastify": "^4.10.0",
+    "hyperapp": "^2.0.22",
+    "hyperapp-render": "^4.0.1"
+  },
+  "devDependencies": {
+    "esbuild": "^0.15.14",
+    "hyperscript": "^2.0.2",
+    "inferno": "^8.0.4",
+    "inferno-hydrate": "^8.0.4",
+    "inferno-hyperscript": "^8.0.4",
+    "inferno-server": "^8.0.4",
+    "mithril": "^2.2.2",
+    "mithril-node-render": "^3.0.2",
+    "observable": "^2.1.4",
+    "preact": "^10.11.3",
+    "preact-render-to-string": "^5.2.6",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "solid-js": "^1.6.2",
+    "vue": "^3.2.45"
+  }
+}
